@@ -48,7 +48,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Correo Electrónico</h3>
-                  <p className="text-gray-600">contacto@medyrad.cl</p>
+                  <p className="text-gray-600">Admision@medyrad.cl</p>
                 </div>
               </div>
 
