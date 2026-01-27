@@ -29,7 +29,7 @@ export function Footer() {
               <li><a href="#inicio" className="text-gray-400 hover:text-secondary transition-colors">Inicio</a></li>
               <li><a href="#quienes-somos" className="text-gray-400 hover:text-secondary transition-colors">Quiénes Somos</a></li>
               <li><a href="#servicios" className="text-gray-400 hover:text-secondary transition-colors">Servicios</a></li>
-              <li><a href="#especialidades" className="text-gray-400 hover:text-secondary transition-colors">Especialidades</a></li>
+              <li><a href="https://medyrad.cui.date/intranet/login.php" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors font-semibold">Resultado de Exámenes</a></li>
               <li><a href="#contacto" className="text-gray-400 hover:text-secondary transition-colors">Contacto</a></li>
             </ul>
           </div>

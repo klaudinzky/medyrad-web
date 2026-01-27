@@ -23,6 +23,7 @@ export function Navbar() {
     { name: "Servicios", href: "#servicios" },
     { name: "Especialidades", href: "#especialidades" },
     { name: "Contacto", href: "#contacto" },
+    { name: "Resultado de Exámenes", href: "https://medyrad.cui.date/intranet/login.php", external: true },
   ];
 
   const AGENDAMIENTO_URL = "https://wa.me/56952191118"; // WhatsApp Link
@@ -51,6 +52,8 @@ export function Navbar() {
               <a 
                 key={link.name} 
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="text-sm font-medium text-gray-600 hover:text-primary transition-colors uppercase tracking-wide"
               >
                 {link.name}
@@ -88,6 +91,8 @@ export function Navbar() {
               <a 
                 key={link.name} 
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="text-base font-medium text-gray-700 hover:text-primary py-2 border-b border-gray-50 last:border-0"
                 onClick={() => setIsOpen(false)}
               >
