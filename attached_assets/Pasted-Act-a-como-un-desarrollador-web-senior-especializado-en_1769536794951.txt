@@ -1,0 +1,88 @@
+Actúa como un desarrollador web senior especializado en sitios médicos profesionales y UX/UI moderno.
+
+Objetivo:
+Crear un sitio web completo que replique la estructura, secciones y enlaces externos del sitio https://www.medyrad.cl, manteniendo la misma lógica de navegación y contenidos, pero con un diseño mucho más moderno, profesional y actual.
+
+Lineamientos generales:
+- El sitio debe ser RESPONSIVE (mobile, tablet, desktop).
+- Estilo visual: limpio, médico, profesional, confiable, moderno.
+- Paleta recomendada: tonos blancos, grises claros, azul médico y acentos suaves.
+- Tipografías modernas y legibles (ej: Inter, Poppins, Lato o similar).
+- Buen uso de espacios, cards, íconos y jerarquía visual.
+- Animaciones sutiles (hover, fade-in, scroll).
+
+Estructura obligatoria (replicar secciones de medyrad.cl):
+1. Header fijo
+   - Logo MEDYRAD
+   - Menú con links a:
+     Inicio
+     Quiénes Somos
+     Servicios
+     Especialidades
+     Agendamiento (link externo, mantener URL original)
+     Contacto
+
+2. Hero principal
+   - Título principal orientado a diagnóstico médico e imagenología
+   - Subtítulo profesional y humano
+   - Botón destacado a "Agendar Hora" (link externo original)
+   - Imagen médica moderna (resonancia, escáner, equipo médico o similar)
+
+3. Sección Servicios / Exámenes
+   - Cards individuales para:
+     Resonancia Magnética
+     Scanner / Tomografía
+     Radiografías
+     Ecografías
+     Laboratorio Clínico (si aparece en el sitio original)
+   - Cada card con ícono, breve descripción y CTA
+
+4. Sección Quiénes Somos
+   - Texto institucional basado en medyrad.cl
+   - Enfoque en tecnología, confianza, diagnóstico oportuno y trato humano
+   - Imagen institucional (clínica, equipo médico o similares)
+
+5. Sección Tecnología / Innovación
+   - Destacar equipamiento moderno e inteligencia artificial en diagnósticos
+   - Diseño tipo grid o columnas
+   - Iconografía médica
+
+6. Sección Agendamiento
+   - CTA claro y destacado
+   - Botón que redirija al sistema de agendamiento externo (mantener link original)
+   - Mensaje simple y claro para pacientes
+
+7. Sección Contacto
+   - Dirección física (la misma de medyrad.cl)
+   - Teléfono
+   - Correo
+   - Horarios de atención
+   - Mapa embebido (Google Maps)
+
+8. Footer completo
+   - Logo
+   - Links rápidos
+   - Redes sociales (si existen)
+   - Copyright MEDYRAD
+
+Fotografías:
+- Usar las mismas imágenes del sitio original si están disponibles públicamente
+- Si no, usar imágenes MUY similares (clínica, resonancia, pacientes, médicos)
+- Estilo real, no ilustraciones genéricas
+
+Tecnología:
+- HTML5 + CSS3 + JavaScript
+- Puedes usar Tailwind CSS o CSS moderno
+- Código ordenado y comentado
+- Preparado para escalar
+
+Extras deseados:
+- Mejorar legibilidad del contenido
+- Mejorar jerarquía visual
+- Diseño más premium que el sitio actual
+- Mantener todo el contenido claro y confiable para pacientes
+
+Entrega:
+- Proyecto funcional completo en Replit
+- Estructura clara de carpetas
+- Listo para deploy
