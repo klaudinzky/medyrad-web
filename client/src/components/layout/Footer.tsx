@@ -63,7 +63,8 @@ export function Footer() {
             <p className="text-gray-400 text-sm">
               Horario: Lun - Vie 08:00 - 20:00<br/>
               Sáb 09:00 - 14:00<br/>
-              WhatsApp: +56 9 5219 1118
+              WhatsApp: +56 9 5219 1118<br/>
+              Fijo: +56 64 2337941 / +56 64 2337942
             </p>
           </div>
         </div>

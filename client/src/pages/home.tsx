@@ -6,6 +6,7 @@ import { About } from "@/components/sections/About";
 import { Technology } from "@/components/sections/Technology";
 import { Contact } from "@/components/sections/Contact";
 import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
 
         <Contact />
       </main>
+      <WhatsAppButton />
       <Footer />
     </div>
   );

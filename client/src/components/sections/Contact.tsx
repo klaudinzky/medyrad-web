@@ -34,9 +34,11 @@ export function Contact() {
                   <Phone className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Teléfono</h3>
-                  <p className="text-gray-600">+56 9 5219 1118</p>
-                  <p className="text-sm text-gray-500 mt-1">Llámenos o escríbanos por WhatsApp para agendar.</p>
+                  <h3 className="font-bold text-gray-900 mb-1">Teléfonos</h3>
+                  <p className="text-gray-600">+56 9 5219 1118 (WhatsApp)</p>
+                  <p className="text-gray-600">+56 64 2337941</p>
+                  <p className="text-gray-600">+56 64 2337942</p>
+                  <p className="text-sm text-gray-500 mt-1">Llámenos o escríbanos para agendar su hora.</p>
                 </div>
               </div>
 
