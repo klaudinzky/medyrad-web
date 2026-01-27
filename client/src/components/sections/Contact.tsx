@@ -25,7 +25,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Dirección</h3>
-                  <p className="text-gray-600">Av. Principal 1234, Oficina 505<br/>Providencia, Santiago (Dirección Referencial)</p>
+                  <p className="text-gray-600">Calle Ejercito 395, Local 5, Complejo Sol de los Lagos.<br/>Boulevard. Rahue Bajo, Osorno, Chile</p>
                 </div>
               </div>
 
@@ -35,8 +35,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Teléfono</h3>
-                  <p className="text-gray-600">+56 2 2345 6789</p>
-                  <p className="text-sm text-gray-500 mt-1">Llámenos para agendar o consultar.</p>
+                  <p className="text-gray-600">+56 9 5219 1118</p>
+                  <p className="text-sm text-gray-500 mt-1">Llámenos o escríbanos por WhatsApp para agendar.</p>
                 </div>
               </div>
 

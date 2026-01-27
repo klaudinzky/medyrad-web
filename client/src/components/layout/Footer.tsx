@@ -18,7 +18,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Centro de diagnóstico por imágenes comprometido con la excelencia médica y el cuidado humano de cada paciente.
+              Medyrad Osorno: Diagnóstico por imágenes, atención médica y laboratorio. Tecnología avanzada y cuidado humano en el corazón de Rahue Bajo.
             </p>
           </div>
 
@@ -62,7 +62,8 @@ export function Footer() {
             </div>
             <p className="text-gray-400 text-sm">
               Horario: Lun - Vie 08:00 - 20:00<br/>
-              Sáb 09:00 - 14:00
+              Sáb 09:00 - 14:00<br/>
+              WhatsApp: +56 9 5219 1118
             </p>
           </div>
         </div>
