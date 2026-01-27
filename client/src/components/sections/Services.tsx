@@ -5,6 +5,7 @@ import mriImg from "@/assets/service-mri.jpg";
 import ctImg from "@/assets/service-ct.jpg";
 import xrayImg from "@/assets/service-xray.jpg";
 import ultrasoundImg from "@/assets/service-ultrasound.jpg";
+import labImg from "@/assets/service-lab.jpg";
 
 const services = [
   {
@@ -39,7 +40,7 @@ const services = [
     title: "Laboratorio Clínico",
     description: "Análisis de sangre y exámenes bioquímicos con procesamiento rápido y resultados en línea.",
     icon: Microscope,
-    image: null, // No image downloaded for lab, using generic style or no image
+    image: labImg,
     color: "bg-rose-50 text-rose-600",
   },
 ];
