@@ -50,10 +50,10 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6">Síguenos</h3>
             <div className="flex gap-4 mb-8">
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
+              <a href="https://www.facebook.com/profile.php?id=100091691477238" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
+              <a href="https://www.instagram.com/centromedyrad" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
                 <Instagram size={20} />
               </a>
               <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
@@ -61,8 +61,8 @@ export function Footer() {
               </a>
             </div>
             <p className="text-gray-400 text-sm">
-              Horario: Lun - Vie 08:00 - 20:00<br/>
-              Sáb 09:00 - 14:00<br/>
+              Horario: Lun - Vie 08:00 - 18:45<br/>
+              Sáb 08:30 - 13:30<br/>
               WhatsApp: +56 9 5219 1118<br/>
               Fijo: +56 64 2337941 / +56 64 2337942
             </p>

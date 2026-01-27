@@ -58,15 +58,17 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Horario de Atención</h3>
-                  <p className="text-gray-600">Lunes a Viernes: 08:00 - 20:00 hrs</p>
-                  <p className="text-gray-600">Sábado: 09:00 - 14:00 hrs</p>
+                  <p className="text-gray-600">Lunes a Viernes: 08:00 - 18:45 hrs</p>
+                  <p className="text-gray-600">Sábado: 08:30 - 13:30 hrs</p>
                 </div>
               </div>
             </div>
 
             <div className="pt-4">
-              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full">
-                Agendar Hora Ahora
+              <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full">
+                <a href="https://wa.me/56952191118" target="_blank" rel="noopener noreferrer">
+                  Agendar Hora Ahora
+                </a>
               </Button>
             </div>
           </div>

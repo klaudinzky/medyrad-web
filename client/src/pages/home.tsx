@@ -25,10 +25,12 @@ export default function Home() {
               ¿Necesita realizarse un examen?
             </h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Agende su hora hoy mismo de forma rápida y sencilla a través de nuestra plataforma online.
+              Agende su hora hoy mismo de forma rápida y sencilla a través de nuestro WhatsApp.
             </p>
-            <Button size="lg" className="bg-white text-secondary hover:bg-gray-100 font-bold rounded-full px-10 h-14 text-lg shadow-xl">
-              Agendar mi Hora
+            <Button asChild size="lg" className="bg-white text-secondary hover:bg-gray-100 font-bold rounded-full px-10 h-14 text-lg shadow-xl">
+              <a href="https://wa.me/56952191118" target="_blank" rel="noopener noreferrer">
+                Agendar mi Hora
+              </a>
             </Button>
           </div>
         </section>

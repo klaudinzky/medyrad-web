@@ -3,7 +3,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-mri.jpg";
 
 export function Hero() {
-  const AGENDAMIENTO_URL = "https://www.medyrad.cl/agendamiento"; 
+  const AGENDAMIENTO_URL = "https://wa.me/56952191118"; 
 
   return (
     <section id="inicio" className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">

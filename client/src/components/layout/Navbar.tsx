@@ -25,7 +25,7 @@ export function Navbar() {
     { name: "Contacto", href: "#contacto" },
   ];
 
-  const AGENDAMIENTO_URL = "https://www.medyrad.cl/agendamiento"; // Placeholder based on request
+  const AGENDAMIENTO_URL = "https://wa.me/56952191118"; // WhatsApp Link
 
   return (
     <header 
