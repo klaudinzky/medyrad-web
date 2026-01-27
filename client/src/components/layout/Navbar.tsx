@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar, Phone, MapPin, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,12 +38,11 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-            <div className="bg-primary text-white p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-activity"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <span className="text-2xl font-heading font-bold text-primary tracking-tight">
-              MEDYRAD
-            </span>
+            <img 
+              src={logoImg} 
+              alt="MEDYRAD" 
+              className="h-12 w-auto object-contain" 
+            />
           </Link>
 
           {/* Desktop Nav */}

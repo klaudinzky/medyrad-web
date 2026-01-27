@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -9,14 +10,13 @@ export function Footer() {
           
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-white/10 p-2 rounded-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-activity text-secondary"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-              </div>
-              <span className="text-2xl font-heading font-bold tracking-tight">
-                MEDYRAD
-              </span>
-            </div>
+            <Link href="/" className="block">
+              <img 
+                src={logoImg} 
+                alt="MEDYRAD" 
+                className="h-12 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" 
+              />
+            </Link>
             <p className="text-gray-400 leading-relaxed">
               Centro de diagnóstico por imágenes comprometido con la excelencia médica y el cuidado humano de cada paciente.
             </p>
