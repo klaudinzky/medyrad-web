@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 export function Footer() {
@@ -55,9 +55,6 @@ export function Footer() {
               </a>
               <a href="https://www.instagram.com/centromedyrad" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
-                <Linkedin size={20} />
               </a>
             </div>
             <p className="text-gray-400 text-sm">
