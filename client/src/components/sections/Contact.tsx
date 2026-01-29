@@ -25,7 +25,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Dirección</h3>
-                  <p className="text-gray-600">Calle Ejercito 395, Local 5, Complejo Sol de los Lagos.<br/>Boulevard. Rahue Bajo, Osorno, Chile</p>
+                  <p className="text-gray-600">Calle Ejercito 395, Local 5, Complejo Sol de los Lagos.<br/>Boulevard Casino Sol. Rahue Bajo, Osorno, Chile</p>
                 </div>
               </div>
 
