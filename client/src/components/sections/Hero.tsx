@@ -25,14 +25,14 @@ export function Hero() {
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-extrabold text-white leading-[1.1] tracking-tight drop-shadow-sm">
-            Diagnóstico Preciso, <br />
+            Medyrad Osorno: <br />
             <span className="text-secondary-foreground text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-200">
-              Cuidado Humano.
+              Imagenología y Diagnóstico
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-100 max-w-xl leading-relaxed font-light drop-shadow-sm">
-            En MEDYRAD combinamos tecnología de vanguardia con un equipo de especialistas comprometidos con su salud y bienestar. Resultados rápidos y confiables.
+            Diagnóstico por imágenes en Osorno con tecnología de vanguardia y atención humana. Resonancia, scanner/tomografía, radiografías y ecografías.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
