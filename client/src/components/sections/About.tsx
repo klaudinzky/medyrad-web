@@ -58,8 +58,15 @@ export function About() {
             </ul>
 
             <div className="pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12">
-                Conozca más sobre nosotros
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12"
+                data-testid="button-whatsapp-conozca-mas"
+              >
+                <a href="https://wa.me/56952191118" target="_blank" rel="noopener noreferrer">
+                  Conozca más sobre nosotros
+                </a>
               </Button>
             </div>
           </div>

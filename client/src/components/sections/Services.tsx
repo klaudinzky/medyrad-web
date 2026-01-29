@@ -90,11 +90,6 @@ export function Services() {
                   {service.description}
                 </CardDescription>
               </CardContent>
-              <CardFooter className="pt-0">
-                <Button variant="link" className="px-0 text-secondary font-semibold hover:text-primary transition-colors">
-                  Saber más <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>
