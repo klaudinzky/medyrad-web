@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Ecografías",
-    description: "Ultrasonido Doppler color y 4D abdominal, partes blandas y vascular.",
+    description: "Ecografías abdominal, partes blandas y vascular.",
     icon: Activity,
     image: ultrasoundImg,
     color: "bg-teal-50 text-teal-600",
