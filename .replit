@@ -48,3 +48,7 @@ waitForPort = 5000
 
 [agent]
 mockupState = "MOCKUP"
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 180000
