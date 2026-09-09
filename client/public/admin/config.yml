@@ -1,0 +1,71 @@
+locale: es
+publish_mode: editorial_workflow
+site_url: https://medyrad.cl
+display_url: https://medyrad.cl
+logo_url: https://medyrad.cl/favicon.png
+backend:
+  name: github
+  repo: klaudinzky/medyrad-web
+  branch: main
+  auth_scope: repo
+
+media_folder: client/public/uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Artículo
+    folder: client/content/blog
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}} — {{publishDate}}"
+    fields:
+      - { label: Título, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string, hint: "Solo minúsculas, números y guiones." }
+      - { label: Extracto, name: excerpt, widget: text }
+      - { label: Fecha de publicación, name: publishDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Fecha de actualización, name: updatedDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Autor, name: author, widget: string }
+      - { label: Credenciales del autor, name: authorCredentials, widget: string }
+      - { label: Categoría, name: category, widget: string }
+      - { label: Etiquetas, name: tags, widget: list, required: false }
+      - { label: Imagen destacada, name: featuredImage, widget: image }
+      - { label: Texto alternativo descriptivo, name: featuredImageAlt, widget: string }
+      - label: Galería
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: Imagen, name: image, widget: image }
+          - { label: Texto alternativo, name: alt, widget: string }
+          - { label: Pie de foto, name: caption, widget: string, required: false }
+      - { label: Título SEO, name: seoTitle, widget: string }
+      - { label: Descripción SEO, name: seoDescription, widget: text }
+      - { label: URL canónica alternativa, name: canonicalOverride, widget: string, required: false }
+      - { label: Borrador, name: draft, widget: boolean, default: true, hint: "Desmarque esta opción antes de publicar para que el artículo aparezca en el sitio y en el sitemap." }
+      - { label: Contenido, name: body, widget: markdown }
+
+  - name: team
+    label: Equipo
+    label_singular: Integrante
+    folder: client/content/team
+    create: true
+    identifier_field: name
+    extension: md
+    format: frontmatter
+    slug: "{{name}}"
+    summary: "{{name}} — {{profession}}"
+    fields:
+      - { label: Nombre, name: name, widget: string }
+      - { label: Profesión, name: profession, widget: string }
+      - { label: Especialidad, name: specialty, widget: string }
+      - { label: Experiencia, name: experience, widget: string }
+      - { label: Credenciales, name: credentials, widget: list }
+      - { label: Foto, name: photo, widget: image }
+      - { label: Texto alternativo descriptivo, name: photoAlt, widget: string }
+      - { label: Orden, name: order, widget: number, value_type: int, min: 0 }
+      - { label: Visible, name: visible, widget: boolean, default: false }
+      - { label: Biografía, name: body, widget: markdown }

@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "dist/public"
+
+[[edge_functions]]
+  function = "strip-legacy-query"
+  path = "/*"
+
+# --- Redirecciones permanentes de artículos antiguos ---
+# Agregar futuras rutas antiguas aquí, antes del fallback SPA.
+# [[redirects]]
+#   from = "/ruta-antigua"
+#   to = "/blog/nuevo-slug/"
+#   status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

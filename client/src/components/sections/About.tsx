@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { Link } from "wouter";
 import teamImg from "@/assets/team-clinic.webp";
 
 export function About() {
@@ -68,9 +69,9 @@ export function About() {
                 className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12"
                 data-testid="button-whatsapp-conozca-mas"
               >
-                <a href="https://wa.me/56952191118" target="_blank" rel="noopener noreferrer">
-                  Conozca más sobre nosotros
-                </a>
+                <Link href="/equipo">
+                  Conozca a nuestro equipo
+                </Link>
               </Button>
             </div>
           </div>

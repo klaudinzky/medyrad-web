@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Manrope:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -6,40 +7,40 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
 
   --radius-lg: 0.75rem;
   --radius-md: 0.5rem;
   --radius-sm: 0.25rem;
 
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(215 25% 27%);
+  --color-background: hsl(200 36% 98%);
+  --color-foreground: hsl(209 42% 19%);
 
-  --color-primary: hsl(215 85% 35%); /* Medical Dark Blue */
-  --color-primary-foreground: hsl(0 0% 100%);
+  --color-primary: hsl(208 74% 31%);
+  --color-primary-foreground: hsl(200 36% 98%);
 
-  --color-secondary: hsl(195 85% 45%); /* Medical Cyan/Light Blue */
-  --color-secondary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(188 66% 40%);
+  --color-secondary-foreground: hsl(200 36% 98%);
 
-  --color-muted: hsl(210 40% 96.1%);
-  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --color-muted: hsl(192 31% 93%);
+  --color-muted-foreground: hsl(207 20% 39%);
 
-  --color-accent: hsl(210 40% 96.1%);
-  --color-accent-foreground: hsl(222.2 47.4% 11.2%);
+  --color-accent: hsl(183 35% 91%);
+  --color-accent-foreground: hsl(208 74% 25%);
 
   --color-destructive: hsl(0 84.2% 60.2%);
   --color-destructive-foreground: hsl(210 40% 98%);
 
-  --color-border: hsl(214.3 31.8% 91.4%);
-  --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: hsl(215 85% 35%);
+  --color-border: hsl(196 26% 86%);
+  --color-input: hsl(196 26% 86%);
+  --color-ring: hsl(188 66% 40%);
 
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(215 25% 27%);
+  --color-card: hsl(200 36% 99%);
+  --color-card-foreground: hsl(209 42% 19%);
 
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(215 25% 27%);
+  --color-popover: hsl(200 36% 99%);
+  --color-popover-foreground: hsl(209 42% 19%);
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -75,6 +76,20 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight font-bold;
   }
+}
+
+@layer components {
+  .page-wash {
+    background: radial-gradient(circle at 90% 0%, hsl(183 35% 91% / .7), transparent 32rem), hsl(200 36% 98%);
+  }
+  .editorial-copy { color: hsl(207 20% 30%); }
+  .editorial-copy h2 { @apply mt-10 mb-4 text-2xl text-primary; }
+  .editorial-copy h3 { @apply mt-8 mb-3 text-xl text-primary; }
+  .editorial-copy p { @apply mb-5 leading-8; }
+  .editorial-copy ul, .editorial-copy ol { @apply mb-6 ml-6 space-y-2; }
+  .editorial-copy ul { @apply list-disc; }
+  .editorial-copy ol { @apply list-decimal; }
+  .editorial-copy a { @apply text-primary underline underline-offset-4; }
 }
 
 /* Custom Scrollbar */

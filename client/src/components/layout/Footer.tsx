@@ -29,8 +29,10 @@ export function Footer() {
               <li><a href="/#inicio" className="text-gray-400 hover:text-secondary transition-colors">Inicio</a></li>
               <li><a href="/#quienes-somos" className="text-gray-400 hover:text-secondary transition-colors">Quiénes Somos</a></li>
               <li><a href="/#servicios" className="text-gray-400 hover:text-secondary transition-colors">Servicios</a></li>
+               <li><Link href="/equipo" className="text-gray-400 hover:text-secondary transition-colors">Equipo</Link></li>
               <li><a href="https://medyrad.cui.date/intranet/login.php" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors font-semibold">Resultado de Exámenes</a></li>
               <li><a href="/#contacto" className="text-gray-400 hover:text-secondary transition-colors">Contacto</a></li>
+              <li><Link href="/blog/" className="text-gray-400 hover:text-secondary transition-colors">Blog</Link></li>
             </ul>
           </div>
 
@@ -50,10 +52,10 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6">Síguenos</h3>
             <div className="flex gap-4 mb-8">
-              <a href="https://www.facebook.com/profile.php?id=100091691477238" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
+              <a href="https://www.facebook.com/profile.php?id=100091691477238" target="_blank" rel="noopener noreferrer" aria-label="Visitar Facebook de Medyrad" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/centromedyrad" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
+              <a href="https://www.instagram.com/centromedyrad" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de Medyrad" className="bg-white/10 p-2 rounded-full hover:bg-secondary transition-colors text-white">
                 <Instagram size={20} />
               </a>
             </div>
@@ -69,8 +71,8 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} MEDYRAD. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Políticas de Privacidad</a>
-            <a href="#" className="hover:text-white transition-colors">Términos y Condiciones</a>
+            <Link href="/politica-de-privacidad" className="hover:text-white transition-colors">Política de Privacidad</Link>
+            <Link href="/terminos-y-condiciones" className="hover:text-white transition-colors">Términos y Condiciones</Link>
           </div>
         </div>
       </div>
