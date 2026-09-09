@@ -18,11 +18,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", href: "#inicio" },
-    { name: "Quiénes Somos", href: "#quienes-somos" },
-    { name: "Servicios", href: "#servicios" },
-    { name: "Especialidades", href: "#especialidades" },
-    { name: "Contacto", href: "#contacto" },
+    { name: "Inicio", href: "/#inicio" },
+    { name: "Quiénes Somos", href: "/#quienes-somos" },
+    { name: "Servicios", href: "/#servicios" },
+    { name: "Especialidades", href: "/#especialidades" },
+    { name: "Contacto", href: "/#contacto" },
     { name: "Resultado de Exámenes", href: "https://medyrad.cui.date/intranet/login.php", external: true },
   ];
 

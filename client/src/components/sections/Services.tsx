@@ -1,6 +1,7 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Scan, Activity, FileText, Microscope, Zap } from "lucide-react";
+import { Link } from "wouter";
 import mriImg from "@/assets/service-mri.jpg";
 import ctImg from "@/assets/service-ct.jpg";
 import xrayImg from "@/assets/service-xray.jpg";
@@ -14,6 +15,7 @@ const services = [
     icon: Scan,
     image: mriImg,
     color: "bg-blue-50 text-blue-600",
+    href: "/resonancia-magnetica-osorno",
   },
   {
     title: "Scanner / Tomografía",
@@ -21,6 +23,7 @@ const services = [
     icon: Zap,
     image: ctImg,
     color: "bg-cyan-50 text-cyan-600",
+    href: "/scanner-tomografia-osorno",
   },
   {
     title: "Radiografías",
@@ -28,6 +31,7 @@ const services = [
     icon: FileText,
     image: xrayImg,
     color: "bg-indigo-50 text-indigo-600",
+    href: "/radiografias-osorno",
   },
   {
     title: "Ecografías",
@@ -35,6 +39,7 @@ const services = [
     icon: Activity,
     image: ultrasoundImg,
     color: "bg-teal-50 text-teal-600",
+    href: "/ecografias-osorno",
   },
   {
     title: "Laboratorio Clínico",
@@ -42,6 +47,7 @@ const services = [
     icon: Microscope,
     image: labImg,
     color: "bg-rose-50 text-rose-600",
+    href: "/laboratorio-clinico-osorno",
   },
 ];
 
@@ -90,6 +96,11 @@ export function Services() {
                   {service.description}
                 </CardDescription>
               </CardContent>
+              <CardFooter className="pt-0">
+                <Link href={service.href} className="inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-secondary">
+                  Ver más <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </CardFooter>
             </Card>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 export function Footer() {
@@ -26,11 +26,11 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6">Enlaces Rápidos</h3>
             <ul className="space-y-3">
-              <li><a href="#inicio" className="text-gray-400 hover:text-secondary transition-colors">Inicio</a></li>
-              <li><a href="#quienes-somos" className="text-gray-400 hover:text-secondary transition-colors">Quiénes Somos</a></li>
-              <li><a href="#servicios" className="text-gray-400 hover:text-secondary transition-colors">Servicios</a></li>
+              <li><a href="/#inicio" className="text-gray-400 hover:text-secondary transition-colors">Inicio</a></li>
+              <li><a href="/#quienes-somos" className="text-gray-400 hover:text-secondary transition-colors">Quiénes Somos</a></li>
+              <li><a href="/#servicios" className="text-gray-400 hover:text-secondary transition-colors">Servicios</a></li>
               <li><a href="https://medyrad.cui.date/intranet/login.php" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-secondary transition-colors font-semibold">Resultado de Exámenes</a></li>
-              <li><a href="#contacto" className="text-gray-400 hover:text-secondary transition-colors">Contacto</a></li>
+              <li><a href="/#contacto" className="text-gray-400 hover:text-secondary transition-colors">Contacto</a></li>
             </ul>
           </div>
 
@@ -38,11 +38,11 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-6">Nuestros Servicios</h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">Resonancia Magnética</li>
-              <li className="text-gray-400">Scanner / Tomografía</li>
-              <li className="text-gray-400">Radiografía Digital</li>
-              <li className="text-gray-400">Ecografía Doppler</li>
-              <li className="text-gray-400">Laboratorio Clínico</li>
+              <li><Link href="/resonancia-magnetica-osorno" className="text-gray-400 hover:text-secondary transition-colors">Resonancia Magnética</Link></li>
+              <li><Link href="/scanner-tomografia-osorno" className="text-gray-400 hover:text-secondary transition-colors">Scanner / Tomografía</Link></li>
+              <li><Link href="/radiografias-osorno" className="text-gray-400 hover:text-secondary transition-colors">Radiografía Digital</Link></li>
+              <li><Link href="/ecografias-osorno" className="text-gray-400 hover:text-secondary transition-colors">Ecografías</Link></li>
+              <li><Link href="/laboratorio-clinico-osorno" className="text-gray-400 hover:text-secondary transition-colors">Laboratorio Clínico</Link></li>
             </ul>
           </div>
 

@@ -14,3 +14,17 @@ mtime_ms = 1788983672026
 storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:faf50a49-8852-4778-91f6-63ca2a282e5d/ca268061-9668-4131-b050-056dc238b078/8b5f9c28-5454-4fce-9230-d3fa5554834d"
 storage_version_token = "1788983678094664"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "7E6dLXINGjX0r5JUALRdG"
+uri = "file://medyrad-website-paginas-servicios.zip"
+type = "unspecified"
+title = "Medyrad con páginas de servicios"
+description = "Versión lista para Netlify con cinco páginas interiores, botones Ver más, SEO por servicio, sitemap actualizado y soporte para rutas directas."
+logical_id = "6aa16d35-6f36-462b-aee9-a74ac367823a"
+content_hash = "sha256:d1d48b62e03fb7f75d26c26f571959b7541dcb15c6fa8d29453ad80e21a474ac"
+size = 11160747
+mtime_ms = 1788984922053
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:faf50a49-8852-4778-91f6-63ca2a282e5d/6aa16d35-6f36-462b-aee9-a74ac367823a/dee023b4-e4ee-49b3-aa65-66bdfddf921d"
+storage_version_token = "1788984941095506"
+content_type = "application/octet-stream"
