@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
-import teamImg from "@/assets/team-clinic.jpg";
+import teamImg from "@/assets/team-clinic.webp";
 
 export function About() {
   const benefits = [
@@ -22,6 +22,10 @@ export function About() {
               <img 
                 src={teamImg} 
                 alt="Equipo Médico MEDYRAD" 
+                width={1600}
+                height={1066}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />

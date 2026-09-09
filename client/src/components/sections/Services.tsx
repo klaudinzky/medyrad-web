@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Scan, Activity, FileText, Microscope, Zap } from "lucide-react";
 import { Link } from "wouter";
 import mriImg from "@/assets/service-mri.jpg";
-import ctImg from "@/assets/service-ct.jpg";
+import ctImg from "@/assets/service-ct.webp";
 import xrayImg from "@/assets/service-xray.jpg";
 import ultrasoundImg from "@/assets/service-ultrasound.jpg";
 import labImg from "@/assets/service-lab.jpg";
@@ -74,6 +74,10 @@ export function Services() {
                   <img 
                     src={service.image} 
                     alt={service.title} 
+                    width={1366}
+                    height={768}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className={`absolute top-4 right-4 p-2 rounded-lg ${service.color} shadow-sm z-20`}>

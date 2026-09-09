@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { Button } from "@/components/ui/button";
 import mriImg from "@/assets/service-mri.jpg";
-import ctImg from "@/assets/service-ct.jpg";
+import ctImg from "@/assets/service-ct.webp";
 import xrayImg from "@/assets/service-xray.jpg";
 import ultrasoundImg from "@/assets/service-ultrasound.jpg";
 import labImg from "@/assets/service-lab.jpg";
@@ -117,7 +117,7 @@ export default function ServiceDetail() {
     <Navbar />
     <main className="pt-20">
       <section className="relative isolate overflow-hidden bg-primary py-16 md:py-24">
-        <div className="absolute inset-0 opacity-20"><img src={service.image} alt="" className="h-full w-full object-cover" /></div>
+        <div className="absolute inset-0 opacity-20"><img src={service.image} alt="" width={1366} height={768} fetchPriority="high" decoding="async" className="h-full w-full object-cover" /></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
         <div className="container relative mx-auto px-4 md:px-6">
           <Link href="/#servicios" className="inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition-colors hover:text-white"><ArrowLeft className="h-4 w-4" /> Volver a servicios</Link>
