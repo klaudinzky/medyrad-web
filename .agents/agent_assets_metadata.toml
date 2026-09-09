@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "D4r6MFcRa4wJRC2QetTKp"
+uri = "file://medyrad-website-google-verification.zip"
+type = "unspecified"
+title = "Sitio Medyrad con verificación de Google"
+description = "Paquete actualizado para subir a Netlify. Incluye la etiqueta de Google Search Console en el archivo principal."
+logical_id = "ca268061-9668-4131-b050-056dc238b078"
+content_hash = "sha256:d8dd72485ac23d59388fa8a5a24627bd8a071c8d7444dfe8dc26bce7accec571"
+size = 11155797
+mtime_ms = 1788983672026
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:faf50a49-8852-4778-91f6-63ca2a282e5d/ca268061-9668-4131-b050-056dc238b078/8b5f9c28-5454-4fce-9230-d3fa5554834d"
+storage_version_token = "1788983678094664"
+content_type = "application/octet-stream"
