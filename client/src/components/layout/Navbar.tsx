@@ -21,7 +21,7 @@ export function Navbar() {
     { name: "Inicio", href: "/#inicio" },
     { name: "Quiénes Somos", href: "/#quienes-somos" },
     { name: "Servicios", href: "/#servicios" },
-    { name: "Especialidades", href: "/#especialidades" },
+    { name: "Tecnología e Innovación", href: "/#tecnologia-innovacion" },
     { name: "Contacto", href: "/#contacto" },
     { name: "Resultado de Exámenes", href: "https://medyrad.cui.date/intranet/login.php", external: true },
   ];

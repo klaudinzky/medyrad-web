@@ -28,3 +28,17 @@ mtime_ms = 1788984922053
 storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:faf50a49-8852-4778-91f6-63ca2a282e5d/6aa16d35-6f36-462b-aee9-a74ac367823a/dee023b4-e4ee-49b3-aa65-66bdfddf921d"
 storage_version_token = "1788984941095506"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "HET5DVcd5aL7fips3-TFk"
+uri = "file://medyrad-website-paginas-servicios-v2.zip"
+type = "unspecified"
+title = "Medyrad páginas de servicios v2"
+description = "Versión corregida para Netlify: botones visibles en cada servicio y menú Tecnología e Innovación conectado a su sección."
+logical_id = "ecbfafb1-be52-4c5d-ac10-6dcc8803e474"
+content_hash = "sha256:f506732418f32cf7352e185c2d7b9388fb53b8317623a4aa642d0beb014e175d"
+size = 7130414
+mtime_ms = 1788985527213
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:faf50a49-8852-4778-91f6-63ca2a282e5d/ecbfafb1-be52-4c5d-ac10-6dcc8803e474/ae43c0d2-a986-4613-abcd-251b2e728e89"
+storage_version_token = "1788985550267654"
+content_type = "application/octet-stream"

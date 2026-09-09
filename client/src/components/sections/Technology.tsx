@@ -25,7 +25,7 @@ const features = [
 
 export function Technology() {
   return (
-    <section className="py-24 bg-primary text-white relative overflow-hidden">
+    <section id="tecnologia-innovacion" className="py-24 bg-primary text-white relative overflow-hidden scroll-mt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">

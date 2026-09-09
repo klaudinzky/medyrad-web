@@ -100,10 +100,13 @@ export function Services() {
                   {service.description}
                 </CardDescription>
               </CardContent>
-              <CardFooter className="pt-0">
-                <Link href={service.href} className="inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-secondary">
-                  Ver más <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+              <CardFooter className="pt-0 pb-6">
+                <Button asChild variant="outline" className="w-full justify-between rounded-full border-primary/25 font-bold text-primary hover:bg-primary hover:text-white">
+                  <Link href={service.href}>
+                    Ver más sobre {service.title}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           ))}
