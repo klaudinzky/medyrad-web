@@ -24,7 +24,7 @@ collections:
     summary: "{{title}} — {{publishDate}}"
     fields:
       - { label: Título, name: title, widget: string }
-      - { label: Slug, name: slug, widget: string, hint: "Solo minúsculas, números y guiones." }
+      - { label: Slug, name: slug, widget: string, hint: "Solo el nombre final, sin /blog/. Use minúsculas, números y guiones.", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', "Use solo minúsculas, números y guiones; no incluya /blog/."] }
       - { label: Extracto, name: excerpt, widget: text }
       - { label: Fecha de publicación, name: publishDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
       - { label: Fecha de actualización, name: updatedDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
@@ -44,8 +44,8 @@ collections:
           - { label: Pie de foto, name: caption, widget: string, required: false }
       - { label: Título SEO, name: seoTitle, widget: string }
       - { label: Descripción SEO, name: seoDescription, widget: text }
-      - { label: URL canónica alternativa, name: canonicalOverride, widget: string, required: false }
-      - { label: Borrador, name: draft, widget: boolean, default: true, hint: "Desmarque esta opción antes de publicar para que el artículo aparezca en el sitio y en el sitemap." }
+      - { label: URL canónica alternativa, name: canonicalOverride, widget: string, required: false, hint: "Normalmente debe dejarse vacía para que el artículo use su propia URL." }
+      - { label: Ocultar del sitio, name: draft, widget: boolean, default: false, hint: "Actívela solo si desea que un contenido ya fusionado siga oculto. El flujo editorial de Decap ya gestiona los borradores." }
       - { label: Contenido, name: body, widget: markdown }
 
   - name: team

@@ -1,6 +1,6 @@
 ---
 title: "Resonancia magnética con y sin contraste: diferencias y preparación"
-slug: /blog/resonancia-magnetica-con-y-sin-contraste
+slug: resonancia-magnetica-con-y-sin-contraste
 excerpt: La resonancia magnética puede realizarse con o sin contraste, según lo
   que necesite evaluar el equipo médico. Conoce sus diferencias, la preparación
   y los antecedentes que debes informar.
@@ -20,8 +20,7 @@ seoTitle: Resonancia con y sin contraste en Osorno | Medyrad
 seoDescription: Conoce las diferencias entre una resonancia magnética con y sin
   contraste, cómo prepararte y qué antecedentes informar antes del examen en
   Osorno.
-canonicalOverride: https://medyrad.cl/resonancia-magnetica-osorno
-draft: true
+draft: false
 ---
 # Resonancia magnética con y sin contraste: diferencias y preparación
 

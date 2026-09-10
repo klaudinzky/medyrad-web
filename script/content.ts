@@ -66,8 +66,12 @@ function required(data: Record<string, unknown>, field: string, file: string): s
 }
 
 function date(data: Record<string, unknown>, field: string, file: string): string {
-  const value = required(data, field, file);
-  const parsed = new Date(value);
+  const value = data[field];
+  const parsed = value instanceof Date
+    ? value
+    : typeof value === "string" && value.trim()
+      ? new Date(value)
+      : new Date(Number.NaN);
   if (Number.isNaN(parsed.valueOf())) throw new Error(`${file}: fecha "${field}" inválida`);
   return parsed.toISOString().slice(0, 10);
 }
