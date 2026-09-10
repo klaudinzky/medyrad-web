@@ -22,10 +22,10 @@ export function Navbar() {
     { name: "Nosotros", href: "/#quienes-somos" },
     { name: "Servicios", href: "/#servicios" },
     { name: "Equipo", href: "/equipo" },
-    { name: "Blog", href: "/blog/" },
     { name: "Tecnología", href: "/#tecnologia-innovacion" },
     { name: "Contacto", href: "/#contacto" },
     { name: "Resultado de Exámenes", href: "https://medyrad.cui.date/intranet/login.php", external: true },
+    { name: "Blog", href: "/blog/" },
   ];
 
   const AGENDAMIENTO_URL = "https://wa.me/56952191118"; // WhatsApp Link
