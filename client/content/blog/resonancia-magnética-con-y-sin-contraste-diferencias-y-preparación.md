@@ -20,6 +20,7 @@ seoTitle: Resonancia con y sin contraste en Osorno | Medyrad
 seoDescription: Conoce las diferencias entre una resonancia magnética con y sin
   contraste, cómo prepararte y qué antecedentes informar antes del examen en
   Osorno.
+canonicalOverride: https://medyrad.cl/resonancia-magnetica-osorno
 draft: false
 ---
 # Resonancia magnética con y sin contraste: diferencias y preparación
