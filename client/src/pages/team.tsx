@@ -4,14 +4,11 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { teamMembers } from "@/generated/content";
+import { applyPageMetadata } from "@/lib/page-metadata";
 
 export default function Team() {
   useEffect(() => {
-    document.title = "Equipo | Medyrad Osorno";
-    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-    if (description) description.content = "Conozca los perfiles profesionales publicados del equipo de Medyrad Osorno.";
-    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (canonical) canonical.href = "https://medyrad.cl/equipo/";
+    applyPageMetadata("/equipo/");
   }, []);
 
   return (

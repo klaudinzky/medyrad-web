@@ -1,1 +1,2 @@
 - [Portable npm lockfiles for Netlify](netlify-npm-lockfiles.md) — Replit registry URLs in a lockfile break Netlify; verify no internal package-firewall host remains.
+- [Remote editorial changes](remote-editorial-changes.md) — Sync GitHub before content edits; the CMS can publish changes independently of this workspace.

@@ -3,8 +3,9 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import sanitizeHtml from "sanitize-html";
+import { pageMetadata, SITE_URL } from "../shared/page-metadata";
 
-const siteUrl = "https://medyrad.cl";
+const siteUrl = SITE_URL;
 const blogDir = path.resolve("client/content/blog");
 const teamDir = path.resolve("client/content/team");
 const generatedFile = path.resolve("client/src/generated/content.ts");
@@ -178,12 +179,23 @@ const escapeText = (value: string) =>
 const absoluteUrl = (value: string) => value.startsWith("http") ? value : `${siteUrl}${value.startsWith("/") ? "" : "/"}${value}`;
 const jsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, "\\u003c");
 
+function pageHead(route: string) {
+  const metadata = pageMetadata[route];
+  const title = escapeText(metadata.title);
+  const description = escapeText(metadata.description);
+  const url = escapeText(`${siteUrl}${route}`);
+  const image = escapeText(absoluteUrl(metadata.image || "/opengraph.jpg"));
+  return `<title>${title}</title><meta name="description" content="${description}"><link rel="canonical" href="${url}"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${url}"><meta property="og:image" content="${image}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${image}">`;
+}
+
 function shell(indexHtml: string, head: string, main: string) {
-  const assetTags = [
-    ...(indexHtml.match(/<link[^>]+rel="stylesheet"[^>]*>/g) ?? []),
-    ...(indexHtml.match(/<script[^>]+type="module"[^>]*><\/script>/g) ?? []),
-  ].join("\n");
-  return `<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">${head}<link rel="icon" type="image/png" href="/favicon.png">${assetTags}</head><body><div id="root">${main}</div></body></html>`;
+  return indexHtml
+    .replace(/<title>[\s\S]*?<\/title>/gi, "")
+    .replace(/<meta\b[^>]*(?:name|property)=["'](?:description|robots|og:[^"']+|twitter:[^"']+)["'][^>]*>/gi, "")
+    .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, "")
+    .replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace("</head>", `${head}</head>`)
+    .replace(/<div id="root"><\/div>/, () => `<div id="root">${main}</div>`);
 }
 
 export async function generateStaticContent(
@@ -191,6 +203,13 @@ export async function generateStaticContent(
 ) {
   content ??= await loadContent();
   const indexHtml = await readFile(path.join(outputDir, "index.html"), "utf8");
+  const organizationSchema = (indexHtml.match(/<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/gi) ?? []).join("");
+  for (const route of Object.keys(pageMetadata)) {
+    if (route === "/blog/") continue;
+    const directory = path.join(outputDir, route.slice(1));
+    await mkdir(directory, { recursive: true });
+    await writeFile(path.join(directory, "index.html"), shell(indexHtml, pageHead(route) + organizationSchema, ""));
+  }
   const blogCards = content.blogPosts.map((post) => `
     <article class="rounded-xl border border-gray-200 overflow-hidden bg-white">
       <img src="${escapeText(post.featuredImage)}" alt="${escapeText(post.featuredImageAlt)}" class="w-full aspect-video object-cover">
@@ -199,7 +218,7 @@ export async function generateStaticContent(
       <p class="mt-3 text-gray-600">${escapeText(post.excerpt)}</p>
       <time datetime="${post.publishDate}" class="block mt-4 text-sm text-gray-500">${post.publishDate}</time></div>
     </article>`).join("");
-  const blogHead = `<title>Blog de salud e imagenología | Medyrad</title><meta name="description" content="Información y novedades de salud, diagnóstico por imágenes y laboratorio clínico de Medyrad Osorno."><link rel="canonical" href="${siteUrl}/blog/"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="Blog | Medyrad"><meta property="og:description" content="Información y novedades de Medyrad Osorno."><meta property="og:url" content="${siteUrl}/blog/"><meta property="og:image" content="${siteUrl}/opengraph.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${siteUrl}/opengraph.jpg">`;
+  const blogHead = pageHead("/blog/");
   const blogMain = `<main class="min-h-screen bg-gray-50 pt-28 pb-16"><div class="container mx-auto px-4 md:px-6 max-w-5xl"><nav aria-label="Migas de pan" class="mb-8"><a href="/">Inicio</a> / Blog</nav><h1 class="text-4xl text-primary mb-8">Blog</h1><div class="grid md:grid-cols-2 gap-8">${blogCards || "<p>Aún no hay artículos publicados.</p>"}</div></div></main>`;
   await mkdir(path.join(outputDir, "blog"), { recursive: true });
   await writeFile(path.join(outputDir, "blog/index.html"), shell(indexHtml, blogHead, blogMain));
@@ -231,9 +250,7 @@ export async function generateStaticContent(
   }
 
   const routes = [
-    "/", "/resonancia-magnetica-osorno", "/scanner-tomografia-osorno",
-    "/radiografias-osorno", "/ecografias-osorno", "/laboratorio-clinico-osorno",
-    "/blog/", "/equipo", "/politica-de-privacidad", "/terminos-y-condiciones",
+    ...Object.keys(pageMetadata),
     ...content.blogPosts.filter((post) => !post.canonicalOverride).map((post) => `/blog/${post.slug}/`),
   ];
   const today = new Date().toISOString().slice(0, 10);

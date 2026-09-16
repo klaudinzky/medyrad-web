@@ -5,30 +5,12 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { blogPosts } from "@/generated/content";
-
-const siteUrl = "https://medyrad.cl";
-
-function setSeo(title: string, description: string, canonical: string, image = `${siteUrl}/opengraph.jpg`) {
-  document.title = title;
-  const setMeta = (selector: string, value: string) => {
-    const element = document.querySelector<HTMLMetaElement>(selector);
-    if (element) element.content = value;
-  };
-  setMeta('meta[name="description"]', description);
-  setMeta('meta[property="og:title"]', title);
-  setMeta('meta[property="og:description"]', description);
-  setMeta('meta[property="og:url"]', canonical);
-  setMeta('meta[property="og:image"]', image);
-  setMeta('meta[name="twitter:title"]', title);
-  setMeta('meta[name="twitter:description"]', description);
-  setMeta('meta[name="twitter:image"]', image);
-  const link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-  if (link) link.href = canonical;
-}
+import { SITE_URL } from "@shared/page-metadata";
+import { applyPageMetadata } from "@/lib/page-metadata";
 
 export function BlogIndex() {
   useEffect(() => {
-    setSeo("Blog de salud e imagenología | Medyrad", "Información y novedades de salud, diagnóstico por imágenes y laboratorio clínico de Medyrad Osorno.", `${siteUrl}/blog/`);
+    applyPageMetadata("/blog/");
   }, []);
 
   return (
@@ -80,10 +62,20 @@ export function BlogPost({ params }: { params: { slug: string } }) {
   const post = blogPosts.find((item) => item.slug === params.slug);
 
   useEffect(() => {
-    if (!post) return;
-    const canonical = post.canonicalOverride || `${siteUrl}/blog/${post.slug}/`;
-    const image = post.featuredImage.startsWith("http") ? post.featuredImage : `${siteUrl}${post.featuredImage}`;
-    setSeo(post.seoTitle, post.seoDescription, canonical, image);
+    if (!post) {
+      applyPageMetadata("/blog/");
+      return;
+    }
+
+    const canonical = post.canonicalOverride || `/blog/${post.slug}/`;
+    const image = post.featuredImage.startsWith("http")
+      ? post.featuredImage
+      : `${SITE_URL}${post.featuredImage}`;
+    applyPageMetadata(
+      canonical,
+      { title: post.seoTitle, description: post.seoDescription, image },
+      "article",
+    );
   }, [post]);
 
   if (!post) {

@@ -10,13 +10,14 @@ import ctImg from "@/assets/service-ct.webp";
 import xrayImg from "@/assets/service-xray.jpg";
 import ultrasoundImg from "@/assets/service-ultrasound.jpg";
 import labImg from "@/assets/service-lab.jpg";
+import { pageMetadata, SITE_URL } from "@shared/page-metadata";
+import { applyPageMetadata } from "@/lib/page-metadata";
 
 type Service = {
   slug: string;
   title: string;
   eyebrow: string;
   description: string;
-  metaDescription: string;
   image: string;
   imageAlt: string;
   overview: string[];
@@ -25,7 +26,6 @@ type Service = {
   faq: { question: string; answer: string }[];
 };
 
-const siteUrl = "https://medyrad.cl";
 const appointmentUrl = "https://wa.me/56952191118";
 
 const services: Record<string, Service> = {
@@ -34,7 +34,6 @@ const services: Record<string, Service> = {
     title: "Resonancia Magnética en Osorno",
     eyebrow: "Diagnóstico por imágenes",
     description: "Imágenes detalladas para acompañar la evaluación indicada por su profesional tratante.",
-    metaDescription: "Resonancia magnética en Osorno. Conozca el examen, orientación previa y cómo coordinar su hora en Medyrad.",
     image: mriImg, imageAlt: "Equipo de resonancia magnética en Medyrad Osorno",
     overview: ["La resonancia magnética utiliza un campo magnético y ondas de radio para obtener imágenes detalladas de distintas zonas del cuerpo.", "Es un examen solicitado habitualmente para complementar la evaluación de estructuras como cerebro, columna, articulaciones, músculos y otros tejidos. No utiliza radiación ionizante.", "En Medyrad le orientamos antes de su atención para que llegue con la información que corresponde a su orden médica."],
     when: ["Evaluación de columna, articulaciones y lesiones musculoesqueléticas.", "Estudio indicado por el profesional tratante en áreas neurológicas.", "Caracterización de tejidos blandos según la solicitud médica."],
@@ -44,7 +43,6 @@ const services: Record<string, Service> = {
   "/scanner-tomografia-osorno": {
     slug: "scanner-tomografia-osorno", title: "Scanner y Tomografía en Osorno", eyebrow: "Diagnóstico por imágenes",
     description: "Tomografía computada para estudios solicitados por su médico, con orientación clara antes de asistir.",
-    metaDescription: "Scanner y tomografía computada en Osorno. Información útil sobre el examen, preparación y agendamiento en Medyrad.",
     image: ctImg, imageAlt: "Equipo de scanner o tomografía computada en Medyrad Osorno",
     overview: ["La tomografía computada, también conocida como scanner, genera imágenes en cortes de diferentes zonas del cuerpo.", "Es una herramienta de apoyo diagnóstico que su profesional puede indicar para revisar estructuras internas con mayor detalle.", "El equipo de Medyrad le explicará los pasos generales de su atención y resolverá las dudas administrativas previas al examen."],
     when: ["Estudios de cabeza, tórax, abdomen, pelvis o extremidades según orden médica.", "Evaluaciones de estructuras óseas y órganos internos.", "Exámenes con protocolo definido por el médico tratante."],
@@ -54,7 +52,6 @@ const services: Record<string, Service> = {
   "/radiografias-osorno": {
     slug: "radiografias-osorno", title: "Radiografías Digitales en Osorno", eyebrow: "Diagnóstico por imágenes",
     description: "Radiología digital para los exámenes indicados por su profesional de salud.",
-    metaDescription: "Radiografías digitales en Osorno. Revise qué llevar, cómo prepararse y contacte a Medyrad para coordinar su atención.",
     image: xrayImg, imageAlt: "Radiografía digital en Medyrad Osorno",
     overview: ["La radiografía es un examen de imagen ampliamente utilizado para observar principalmente huesos y algunas estructuras del tórax.", "La tecnología digital permite registrar las imágenes del estudio solicitado por su médico.", "Su atención considera las indicaciones del examen y medidas de resguardo que correspondan al tipo de radiografía."],
     when: ["Evaluación de huesos y articulaciones ante una indicación clínica.", "Radiografías de tórax solicitadas por el profesional tratante.", "Controles o estudios comparativos cuando son requeridos en la orden médica."],
@@ -64,7 +61,6 @@ const services: Record<string, Service> = {
   "/ecografias-osorno": {
     slug: "ecografias-osorno", title: "Ecografías en Osorno", eyebrow: "Diagnóstico por imágenes",
     description: "Estudios ecográficos solicitados por su profesional, con indicaciones previas según la zona a evaluar.",
-    metaDescription: "Ecografías en Osorno: información sobre estudios abdominales, de partes blandas y otras indicaciones. Contacte a Medyrad.",
     image: ultrasoundImg, imageAlt: "Examen de ecografía en Medyrad Osorno",
     overview: ["La ecografía utiliza ondas de ultrasonido para generar imágenes en tiempo real de órganos, tejidos y vasos sanguíneos.", "Puede ser indicada para distintas zonas del cuerpo, incluyendo abdomen, partes blandas y evaluación vascular, de acuerdo con el criterio clínico.", "Cada examen tiene requisitos propios. Por eso, una confirmación previa ayuda a que su atención se realice con las indicaciones adecuadas."],
     when: ["Ecografías abdominales y de partes blandas.", "Estudios vasculares cuando el profesional tratante lo solicita.", "Evaluación de una zona específica según su orden médica."],
@@ -74,7 +70,6 @@ const services: Record<string, Service> = {
   "/laboratorio-clinico-osorno": {
     slug: "laboratorio-clinico-osorno", title: "Laboratorio Clínico en Osorno", eyebrow: "Apoyo diagnóstico",
     description: "Exámenes de laboratorio solicitados por su profesional, con orientación sobre requisitos previos.",
-    metaDescription: "Laboratorio clínico en Osorno. Consulte por toma de muestras, preparación de exámenes y atención en Medyrad.",
     image: labImg, imageAlt: "Área de laboratorio clínico en Medyrad Osorno",
     overview: ["El laboratorio clínico procesa muestras solicitadas por profesionales de salud para apoyar la evaluación y seguimiento de distintas condiciones.", "La toma de muestra y sus requisitos dependen del examen solicitado: algunos necesitan ayuno, horarios específicos o instrucciones particulares.", "Antes de asistir, revise su orden y contáctenos para confirmar las condiciones de preparación que aplican en su caso."],
     when: ["Exámenes de sangre y perfiles solicitados en una orden médica.", "Controles de laboratorio indicados por el profesional tratante.", "Estudios bioquímicos y otras determinaciones disponibles según solicitud."],
@@ -85,23 +80,15 @@ const services: Record<string, Service> = {
 
 function ServiceSeo({ service }: { service: Service }) {
   useEffect(() => {
-    const url = `${siteUrl}/${service.slug}`;
-    document.title = `${service.title} | Medyrad`;
-    const setMeta = (selector: string, content: string) => {
-      const element = document.querySelector(selector) as HTMLMetaElement | null;
-      if (element) element.content = content;
-    };
-    setMeta('meta[name="description"]', service.metaDescription);
-    setMeta('meta[property="og:title"]', `${service.title} | Medyrad Osorno`);
-    setMeta('meta[property="og:description"]', service.metaDescription);
-    setMeta('meta[property="og:url"]', url);
-    const canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (canonical) canonical.href = url;
+    const canonicalPath = `/${service.slug}/`;
+    const metadata = pageMetadata[canonicalPath];
+    const url = `${SITE_URL}${canonicalPath}`;
+    applyPageMetadata(canonicalPath);
     const scriptId = "service-json-ld";
     document.getElementById(scriptId)?.remove();
     const script = document.createElement("script");
     script.id = scriptId; script.type = "application/ld+json";
-    script.text = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalProcedure", name: service.title, description: service.metaDescription, url, image: `${siteUrl}${service.image}`, provider: { "@type": "MedicalOrganization", name: "Medyrad Osorno", url: siteUrl, telephone: "+56 9 5219 1118", address: { "@type": "PostalAddress", addressLocality: "Osorno", addressRegion: "Los Lagos", addressCountry: "CL" } } });
+    script.text = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalProcedure", name: service.title, description: metadata.description, url, image: `${SITE_URL}${service.image}`, provider: { "@type": "MedicalOrganization", name: "Medyrad Osorno", url: SITE_URL, telephone: "+56 9 5219 1118", address: { "@type": "PostalAddress", addressLocality: "Osorno", addressRegion: "Los Lagos", addressCountry: "CL" } } });
     document.head.appendChild(script);
     return () => document.getElementById(scriptId)?.remove();
   }, [service]);
@@ -110,7 +97,8 @@ function ServiceSeo({ service }: { service: Service }) {
 
 export default function ServiceDetail() {
   const [location] = useLocation();
-  const service = services[location];
+  const servicePath = location.replace(/\/+$/, "") || "/";
+  const service = services[servicePath];
   if (!service) return null;
   return <div className="min-h-screen bg-background font-sans text-gray-700">
     <ServiceSeo service={service} />

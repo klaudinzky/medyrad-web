@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -7,8 +8,13 @@ import { Technology } from "@/components/sections/Technology";
 import { Contact } from "@/components/sections/Contact";
 import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { applyPageMetadata } from "@/lib/page-metadata";
 
 export default function Home() {
+  useEffect(() => {
+    applyPageMetadata("/");
+  }, []);
+
   return (
     <div className="min-h-screen bg-background font-sans">
       <Navbar />

@@ -4,19 +4,15 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { ChevronRight, MessageCircle, ShieldCheck } from "lucide-react";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { applyPageMetadata } from "@/lib/page-metadata";
 
 export default function Legal({ type }: { type: "privacy" | "terms" }) {
   const privacy = type === "privacy";
   const title = privacy ? "Política de privacidad" : "Términos y condiciones";
   useEffect(() => {
-    const description = privacy ? "Política de privacidad del sitio web público de Medyrad Osorno." : "Términos y condiciones de uso del sitio web público de Medyrad Osorno.";
-    document.title = `${title} | Medyrad Osorno`;
-    const setMeta = (selector: string, content: string) => { const node = document.querySelector<HTMLMetaElement>(selector); if (node) node.content = content; };
-    setMeta('meta[name="description"]', description);
-    setMeta('meta[property="og:title"]', document.title);
-    setMeta('meta[property="og:description"]', description);
-    const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (canonical) canonical.href = `https://medyrad.cl/${privacy ? "politica-de-privacidad" : "terminos-y-condiciones"}/`;
+    applyPageMetadata(
+      privacy ? "/politica-de-privacidad/" : "/terminos-y-condiciones/",
+    );
   }, [privacy, title]);
   return (
     <div className="min-h-[100dvh] bg-background">
