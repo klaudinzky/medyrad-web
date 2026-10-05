@@ -61,7 +61,7 @@ const services: Record<string, Service> = {
   "/ecografias-osorno": {
     slug: "ecografias-osorno", title: "Ecografías en Osorno", eyebrow: "Diagnóstico por imágenes",
     description: "Estudios ecográficos solicitados por su profesional, con indicaciones previas según la zona a evaluar.",
-    image: ultrasoundImg, imageAlt: "Examen de ecografía en Medyrad Osorno",
+    image: ultrasoundImg, imageAlt: "Equipo de ecografía junto a la camilla de atención en Medyrad Osorno",
     overview: ["La ecografía utiliza ondas de ultrasonido para generar imágenes en tiempo real de órganos, tejidos y vasos sanguíneos.", "Puede ser indicada para distintas zonas del cuerpo, incluyendo abdomen, partes blandas y evaluación vascular, de acuerdo con el criterio clínico.", "Cada examen tiene requisitos propios. Por eso, una confirmación previa ayuda a que su atención se realice con las indicaciones adecuadas."],
     when: ["Ecografías abdominales y de partes blandas.", "Estudios vasculares cuando el profesional tratante lo solicita.", "Evaluación de una zona específica según su orden médica."],
     preparation: ["Lleve la orden médica con el tipo de ecografía claramente indicado.", "Para algunos estudios puede requerirse ayuno o mantener la vejiga llena.", "No siga instrucciones genéricas: confirme con Medyrad la preparación exacta de su examen."],
