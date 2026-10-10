@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Instagram } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo-octubre.png";
 
 export function Footer() {
   return (
@@ -14,7 +14,7 @@ export function Footer() {
               <img 
                 src={logoImg} 
                 alt="MEDYRAD" 
-                className="h-12 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" 
+                className="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" 
               />
             </Link>
             <p className="text-gray-400 leading-relaxed">

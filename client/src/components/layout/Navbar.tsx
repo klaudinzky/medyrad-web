@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/logo-octubre.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
